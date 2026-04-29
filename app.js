@@ -13,4 +13,6 @@ app.use("/inventory", require("./routes/inventory"));
 app.use("/purchase", require("./routes/purchase"));
 app.use("/admin", require("./routes/admin"));
 
-app.listen(3000, () => console.log("Server running"));
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => console.log("Server running"));
